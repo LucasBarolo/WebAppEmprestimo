@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "EspelhoProposta";
+}
+
+<h2>Espelho da Proposta</h2>
+<div class="jumbotron">
+    <div>
+        <div>
+            <label>Nome do Cliente: @ViewBag.DetalheProposta.ClienteProposta.NomeCompleto</label>
+        </div>
+        <div>
+            <label>Data de Nascimento: @ViewBag.DetalheProposta.ClienteProposta.DataNascimento</label>
+        </div>
+        <div>
+            <label>Sexo: @ViewBag.DetalheProposta.ClienteProposta.Sexo</label>
+        </div>
+        <div>
+            <label>Estado Civil: @ViewBag.DetalheProposta.ClienteProposta.EstadoCivil</label>
+        </div>
+        <div>
+            <label>Endereço: @ViewBag.DetalheProposta.ClienteProposta.EnderecoCompleto</label>
+        </div>
+    </div>
+    <ul>
+        @foreach (var item in ViewBag.emprestimos)
+        {
+            <li>
+                Parcela: @item.Parcela  -  Parcela Principal: @item.ParcelaPrincipal  -  Juros Linear: @item.JurosLinear  -  Total Parcela Linear = @item.ParcelaLinear
+                -  Juros Exponencial: @item.JurosExponencial  -  Total Parcela Exponencial: @item.ParcelaExponencial
+            </li>
+        }
+    </ul>
+
+    <div class="form-group">
+        <p><a href="/Home/Obrigado" class="btn btn-primary btn-lg">Confirmar Proposta &raquo;</a></p>
+    </div>
+</div>

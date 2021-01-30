@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "PaginaDadosCliente";
+}
+<div class="text-center">
+<h2>Dados Cadastrais do Cliente</h2>
+</div>
+<body>
+    <div class="jumbotron">
+        <form action="/Home/EspelhoProposta" method="post">
+
+            <div class="form-group">
+                <label for="nomecliente">Nome Completo:</label>
+                <input id="nomecompleto" name="dadosCliente.NomeCompleto" size="300" class="form-control" placeholder="Escreva seu nome completo" />
+            </div>
+
+            <div class="form-group">
+                <label for="datanascimento">Data Nascimento:</label>
+                <input type="date" name="dadosCliente.DataNascimento" min="1900-01-01" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+                <input list="listaSexo" class="form-control" placeholder="Sexo" name="dadosCliente.Sexo" />
+                <datalist id="listaSexo">
+                    <option value="Masculino">Masculino</option>>
+                    <option value="Feminino">Feminino</option>>
+                </datalist>
+            </div>
+            <div class="form-group">
+
+                <label for="estadocivil">Estado Civil:</label>
+                <input list="estadocivil" class="form-control" placeholder="Estado Civil" name="dadosCliente.EstadoCivil" />
+                <datalist id="estadocivil">
+                    <option value="Solteiro(a)"></option>>
+                    <option value="Casado(a)"></option>>
+                    <option value="Divorciado(a)"></option>>
+                    <option value="Viúvo(a)"></option>>
+                </datalist>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="enderecocompleto">Endereço Completo:</label>
+                <input id="enderecocompleto" name="dadosCliente.EnderecoCompleto" size="500" class="form-control" placeholder="Endereço completo" />
+
+            </div>
+
+            <div class="form-group">
+                <label for="valoremprestimo">Valor do Empréstimo:</label>
+                <input id="valoremprestimo" name="proposta.ValorEmprestimo" size="300" class="form-control" placeholder="R$" />
+            </div>
+
+            <div class="form-group">
+                <label for="qtdparcelas">Quantidade de Parcelas:</label>
+                <input id="qtdparcelas" name="proposta.QtdParcela" size="300" class="form-control" placeholder="Parcelas" />
+            </div>
+
+            <div class="form-group">
+                <label for="taxajuros">Taxa de Juros:</label>
+                <input id="taxajuros" name="proposta.TaxaJuros" size="300" class="form-control" placeholder="Taxa de Juros" />
+            </div>
+
+            <div class="form-group">
+                <p><button type="submit" class="btn btn-primary btn-lg">Solicitar Simulação &raquo;</button></p>
+            </div>
+
+         
+        </form>
+    </div>
+</body>
+
